@@ -158,7 +158,8 @@ function generateSpellingBee(seed) {
     { center: 'c', outer: ['a', 't', 'e', 'i', 'n', 'o'] }
   ];
   
-  const selectedSet = letterSets[seed % letterSets.length];
+  const random = new SeededRandom(seed);
+  const selectedSet = letterSets[random.nextInt(0, letterSets.length - 1)];
   const centerLetter = selectedSet.center;
   const outerLetters = selectedSet.outer;
   const allLetters = [centerLetter, ...outerLetters];

@@ -204,7 +204,7 @@ function Wordle() {
                 onClick={() => handleKeyPress(key)}
                 style={{
                   backgroundColor: key.length === 1 ? getKeyboardColor(key) : '#818384',
-                  color: guesses.some(g => g.word.includes(key)) ? '#ffffff' : '#000000'
+                  color: key.length === 1 && getKeyboardColor(key) !== '#ffffff' ? '#ffffff' : '#000000'
                 }}
               >
                 {key === 'BACKSPACE' ? '⌫' : key}
