@@ -188,6 +188,7 @@ function Crossword() {
   useEffect(() => {
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedCell, userGrid, direction]);
 
   if (loading) {

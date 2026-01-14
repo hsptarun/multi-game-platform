@@ -214,6 +214,7 @@ function Sudoku() {
   useEffect(() => {
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedCell, userGrid]);
 
   if (loading) {
